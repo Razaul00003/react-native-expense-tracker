@@ -5,32 +5,11 @@ import ExpensesList from "./ExpensesList";
 
 import ExpensesSummary from "./ExpensesSummary";
 
-const DUMMY_EXPENSES = [
-  {
-    id: "e1",
-    description: "shoes",
-    amount: 59.99,
-    date: new Date("2023-01-11"),
-  },
-  {
-    id: "e2",
-    description: "Laptop",
-    amount: 99.99,
-    date: new Date("2021-01-11"),
-  },
-  {
-    id: "e3",
-    description: "Gadgets",
-    amount: 99.99,
-    date: new Date("2022-01-11"),
-  },
-];
-
 export default function ExpensesOutput({ expenses, expensesPeriod }) {
   return (
     <View style={styles.container}>
-      <ExpensesSummary expenses={DUMMY_EXPENSES} periodName={expensesPeriod} />
-      <ExpensesList expenses={DUMMY_EXPENSES} />
+      <ExpensesSummary expenses={expenses} periodName={expensesPeriod} />
+      <ExpensesList expenses={expenses} />
     </View>
   );
 }
